@@ -92,6 +92,80 @@
                 </div>
             </div>
         </section>
+        <section class="container">
+            <div id="app">
+                <a class="nuevo" href="#tor-s3">¡Regístrate como veterinario!</a>
+                <section v-if="error">Lo sentimos, se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando...</p>
+                    </section>
+                    <section v-else>
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Especialidad</th>
+                                        <th>Ubicación</th>
+                                        <th>Descripción</th>
+                                        <th>Teléfono</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="persona in personas">
+                                        <td>{{persona.id}}</td>
+                                        <td>{{persona.nombre}}</td>
+                                        <td>{{persona.especialidad}}</td>
+                                        <td>{{persona.ubicacion}}</td>
+                                        <td>{{persona.descripcion}}</td>
+                                        <td>{{persona.telefono}}</td> 
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(persona.id)">Eliminar</button>
+                                            <button class="boton" :data-href="'editar_personas.html?id='+persona.id+'&nombre='+persona.nombre+'&especialidad='+persona.especialidad+'&ubicacion='+persona.ubicacion+'&descripcion='+persona.descripcion+'&telefono='+persona.telefono" onclick="window.location.href=this.dataset.href">Editar</button>
+                                            <!-- <a class="boton" :href="'editar_personas.html?id='+persona.id+'&nombre='+persona.nombre+'&especialidad='+persona.especialidad+'&ubicacion='+persona.ubicacion+'&descripcion='+persona.descripcion+'&telefono='+persona.telefono" >Editar</a> -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+        <section class="tor-s3" id="tor-s3">
+            <div class="container-form">
+                <form action="" >
+                    <div class="entrada">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="entrada">
+                        <label for="especialidad">Especialidad</label>
+                        <input type="text" name="especialidad" id="especialidad">
+                    </div>
+                    <div class="entrada">
+                        <label for="ubicacion">Ubicación</label>
+                        <input type="text" name="ubicacion" id="ubicacion">
+                    </div>
+                    <div class="entrada">
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" name="descripcion" id="descripcion">
+                    </div>
+                    <div class="entrada">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" name="telefono" id="telefono">
+                    </div>
+                    <div class="entrada">
+                        <button class="modificar" type="button" onclick="guardar()">Guardar</button>
+                    </div>  
+                </form>
+            </div>
+
+        </section>
     </main>
     <footer class="foot">
         <div class="columna-izquierda">
@@ -119,6 +193,8 @@
             </div> 
         </div>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://kit.fontawesome.com/643ef715bb.js" crossorigin="anonymous"></script>
+    <script src="../javascript/adogtor.js"></script>
 </body>
 </html>

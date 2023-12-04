@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/media-index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/editar_personas.css">
+    <title>ADOGTIME</title>
+</head>
+<body>
+    <header class="nav">
+        <div class="nav-div1">
+            <a href="../index.html"><img id="logo1" class="logo" src="../img/logo1.png" alt="Inicio"></a>
+            <a href="../index.html"><img id="logo2" class="logo" src="../img/logo4.png" alt="Inicio"></a>
+        </div>
+        <nav class="menu">
+            <a class="a" id="opcion-adopcion" href="adogtame.html">Adogtame</a>
+            <a class="a" id="opcion-tour" href="adogtour.html">Adogtour</a>
+            <a class="a" id="opcion-toy" href="adogtoy.html">Adogtoy</a>
+            <a class="a" id="opcion-tell" href="adogtell.html">Adogtell</a>
+            <a class="a" id="opcion-tool" href="adogtool.html">Adogtool</a>
+            <a class="a" id="opcion-doctor" href="adogtor.html">Adogtor</a>
+        </nav>
+    </header>
+    <main>
+        <section class="s1">
+            <div class="s1-div1" style="background-image: url(../img/2-ADOGTAME.jpg);">
+                <div class="s1-div1-div1">
+                    <h1 id="titulo-adopcion">ya soy tu <span class="color">familia</span><br>y te estoy <span class="color">esperando</span>.</h1>
+                    <h3 id="subtitulo-adopcion">siempre a favor de la adopción responsable</h3>
+                </div>
+            </div>
+        </section>
+        <section class="s2">
+            <div class="s2-div1">
+                <p>Aquí descubrirás adorables perritos en busca de un hogar.</p>
+                <p>Lee sus perfiles y encuentra a tu compañero perfecto.</p>
+            </div>
+        </section>
+        <section id="editar_persona">
+            <div class="container-form">
+                <form>
+                    <div class="entrada">
+                        <label for="id">ID</label>
+                        <input type="number" name="id" id="id" disabled>
+                    </div>
+                    <div class="entrada">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="entrada">
+                        <label for="especialidad">Especialidad</label>
+                        <input type="text" name="especialidad" id="especialidad">
+                    </div>
+                    <div class="entrada">
+                        <label for="ubicacion">Ubicación</label>
+                        <input type="text" name="ubicacion" id="ubicacion">
+                    </div>
+                    <div class="entrada">
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" name="descripcion" id="descripcion">
+                    </div>
+                    <div class="entrada">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" name="telefono" id="telefono">
+                    </div class="entrada">
+                    <div class="entrada">
+                        <button class="modificar" type="button" onclick="modificar()">Modificar</button>
+                    </div>
+                    
+                </form>         
+              </div>
+        </section>
+    </main>
+    <footer class="foot">
+        <div class="columna-izquierda">
+            <h3>Enlaces de Interés</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="adogtame.html">Adogtame</a></li>
+                <li><a href="adogtour.html">Adogtour</a></li>
+                <li><a href="adogtoy.html">Adogtoy</a></li>
+                <li><a href="adogtell.html">Adogtell</a></li>
+                <li><a href="adogtool.html">Adogtool</a></li>
+                <li><a href="adogtor.html">Adogtor</a></li>
+            </ul>
+        </div>
+        <div class="columna-central">
+            <img id="img" src="../img/logo1.png" alt="">
+        </div>
+        <div class="columna-derecha">
+            <h3>Contacte con nosotros</h3>
+            <p><a href="adogtell.html#contacto">Ir al formulario</a></p>
+            <p>adogtime@gmail.com</p>
+            <div class="redes-sociales">
+                <i class="fa-brands fa-facebook" id="sm"></i>
+                <i class="fa-brands fa-twitter" id="sm"></i>
+            </div> 
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/643ef715bb.js" crossorigin="anonymous"></script>
+    <script src="../javascript/editar_personas.js"></script>
+</body>
+</html>
